@@ -162,7 +162,7 @@ class GooeyComponent{
             //set display property
             if(this.display){
                 element.style.display = this.display;
-                //keep going
+                //keep going with display properties
             }
 
 
