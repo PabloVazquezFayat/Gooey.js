@@ -15,6 +15,7 @@ class GooeyComponent{
         src,
         href,
         style,
+        display,
     ){
         this.root = root;
         this.nameId = nameId;
@@ -31,6 +32,7 @@ class GooeyComponent{
         this.src = src;
         this.href = href;
         this.style = style;
+        this.display = display;
         this.defaults = {
             type: 'div',
             background: '#4C4CFF',
@@ -156,6 +158,13 @@ class GooeyComponent{
             }else{
                 element.style.listStyle = this.style;
             }
+
+            //set display property
+            if(this.display){
+                element.style.display = this.display;
+                //keep going
+            }
+
 
             element.setAttribute('src', this.src);
 
