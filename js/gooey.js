@@ -158,10 +158,8 @@ class GooeyComponent{
             }else{
                 element.style.listStyle = this.style;
             }
-
-            //set display property
+            
             if(this.flex){
-                console.log('yo');
                 element.style.display = this.flex;
                 element.style.flexDirection = this.flex.flexDirection;
                 element.style.flexWrap = this.flex.flexWrap;
