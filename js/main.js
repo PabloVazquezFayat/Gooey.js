@@ -404,6 +404,13 @@ window.addEventListener("load", function(){
     footerNav.background = 'navy';
     footerNav.height = '300px';
     footerNav.text = 'none';
+    footerNav.flex = {
+        flexDirection: 'row',   
+        flexWrap: 'wrap', 
+        justifyContent: 'center',
+        alignItems: 'center', 
+        alignContent: 'center'
+    };
     footerNav.Create();
 
     let footerNavContainer = new GooeyDiv();

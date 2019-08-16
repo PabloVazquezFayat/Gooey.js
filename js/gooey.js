@@ -15,7 +15,7 @@ class GooeyComponent{
         src,
         href,
         style,
-        display,
+        flex,
     ){
         this.root = root;
         this.nameId = nameId;
@@ -32,7 +32,7 @@ class GooeyComponent{
         this.src = src;
         this.href = href;
         this.style = style;
-        this.display = display;
+        this.flex = flex;
         this.defaults = {
             type: 'div',
             background: '#4C4CFF',
@@ -160,9 +160,14 @@ class GooeyComponent{
             }
 
             //set display property
-            if(this.display){
-                element.style.display = this.display;
-                //keep going with display properties
+            if(this.flex){
+                console.log('yo');
+                element.style.display = this.flex;
+                element.style.flexDirection = this.flex.flexDirection;
+                element.style.flexWrap = this.flex.flexWrap;
+                element.style.justifyContent = this.flex.justifyContent;
+                element.style.alignItems = this.flex.alignItems;
+                element.style.alignContent = this.flex.alignContent;
             }
 
 
