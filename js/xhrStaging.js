@@ -6,7 +6,15 @@
 function getData(method, url, dataType){
     return new Promise((resolve, reject) => {
 
-        const xhr = new XMLHttpRequest();
+        let xhr = new XMLHttpRequest();
+
+        if(!method){
+            return console.log('Request METHOD must be set');
+        }
+
+        if(!url){
+            return console.log('Request URL must be set');
+        }
 
         xhr.open(method, url);
         
@@ -23,7 +31,7 @@ function getData(method, url, dataType){
     });
 }
 
-let data = getData('GET', 'https://api.punkapi.com/v2/beers', 'json')
+let data = getData('GET', 'http://localhost:3000/', 'json')
     .then((res)=>{
         console.log(res);
     })
