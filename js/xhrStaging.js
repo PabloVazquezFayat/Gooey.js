@@ -4,7 +4,8 @@
 //Need to integrate promises with XHR 
 
 function getData(method, url, dataType){
-    return new Promise((resolve, reject) => {
+    
+    let data = new Promise((resolve, reject) => {
 
         let xhr = new XMLHttpRequest();
 
@@ -29,6 +30,8 @@ function getData(method, url, dataType){
         xhr.send();
 
     });
+
+    return data;
 }
 
 let data = getData('GET', 'http://localhost:3000/', 'json')

@@ -1,5 +1,7 @@
 window.addEventListener("load", function(){
 
+    importComponent('js/xhrStaging.js');
+
     var state = {
         users: [
             {
